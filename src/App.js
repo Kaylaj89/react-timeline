@@ -7,7 +7,7 @@ import TimelineEvent from './components/TimelineEvent';
 
 
 function App() {
-  console.log(timelineData.events);
+  // console.log(timelineData.events);
 
   // Customize the code below
   return (
