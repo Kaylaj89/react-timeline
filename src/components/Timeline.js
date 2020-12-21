@@ -2,9 +2,23 @@ import React from 'react';
 import './Timeline.css';
 import TimelineEvent from './TimelineEvent';
 
-const Timeline = () => {
+const Timeline = (props) => {
+  const timelineComponents = props.events.map((event, i) => {
+    return (
+      <TimelineEvent
+        key={i}
+        person={event.person}
+        status={event.status}
+        timeStamp={event.timeStamp}
+        />
+    );
+  });
   
-  return;
-}
+  return (
+    <div className = "timeline">
+      {timelineComponents}
+    </div>
+  );
+};
 
 export default Timeline;

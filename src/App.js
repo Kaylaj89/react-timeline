@@ -5,18 +5,9 @@ import timelineData from './data/timeline.json';
 import Timeline from './components/Timeline';
 import TimelineEvent from './components/TimelineEvent';
 
-// const timeLineDatas = [
-//   {
-//     person: 'Adele Goldberg',
-//     status: 'In Smalltalk, everything happens somewhere else.',
-//     timeStamp: '2018-05-18T22:12:03Z',
-
-//   },
-  
-// ]
 
 function App() {
-  console.log(timelineData);
+  console.log(timelineData.events);
 
   // Customize the code below
   return (
@@ -25,8 +16,7 @@ function App() {
         <h1 className="App-title">Ada Lovelace's social media feed</h1>
       </header>
       <main className="App-main">
-        <TimelineEvent person="Adele Goldberg" status="In Smalltalk, everything happens somewhere else." timeStamp= "2018-05-18T22:12:03Z"
-        />
+        <Timeline events={timelineData.events} /> 
       </main>
     </div>
   );
